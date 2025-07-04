@@ -124,6 +124,7 @@ public class BooksController : ControllerBase
         }
         catch (Exception ex)
         {
+            Console.WriteLine($"DeleteBook error for ID {id}: {ex.Message}"); // Korrigerad till dubbla citattecken
             return StatusCode(500, $"Internal server error: {ex.Message}");
         }
 
